@@ -4,41 +4,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4; /* Ή όποιο χρώμα προτιμάς */
+    min-height: 100vh;
+    background-color: #000000; /* Μαύρο background */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #ffffff; /* Λευκό γράμματα για να φαίνονται στο μαύρο */
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
+    width: 90%;
+    max-width: 800px;
 }
 
 .logo {
-    max-width: 150px; /* Ρύθμισε το μέγεθος της εικόνας */
-    margin-bottom: 20px;
+    width: 100%;       /* Παίρνει όλο το πλάτος του container */
+    max-width: 500px;  /* Αλλά δεν ξεπερνάει τα 500px (ρύθμισέ το όσο θες) */
+    height: auto;
+    margin-bottom: 30px;
+    /* Προαιρετικά: προσθέτει μια απαλή λάμψη αν το logo είναι σκοτεινό */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1)); 
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.1rem;
+    color: #888; /* Γκριζωπό κείμενο για στυλ */
 }
 
-/* Ένα απλό εφέ κίνησης */
 .loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
+    border: 2px solid #333;
+    border-top: 2px solid #ffffff;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 2s linear infinite;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 @keyframes spin {
